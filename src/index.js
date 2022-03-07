@@ -5,12 +5,10 @@ import reportWebVitals from './reportWebVitals';
 
 const name = prompt('Podaj imię');
 
-const element = name === ''
-    ? <strong>Brak imienia.</strong>
-    : <h1>{name}</h1>;
-
 render(
-    element,
+    name === ''
+        ? <strong>Brak imienia.</strong>
+        : <h1>{name}</h1>,
     document.getElementById('root'),
 )
 
