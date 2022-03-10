@@ -2,13 +2,25 @@ import React from 'react';
 import {render} from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+import {Participants} from './Participants';
 
-const name = prompt('Podaj imię');
+const data = [
+    {
+        name: 'Jan',
+        email: 'jan@test.pl',
+    },
+    {
+        name: 'Anna',
+        email: 'anna@wp.pl',
+    }
+];
 
 render(
-    name === ''
-        ? <strong>Brak imienia.</strong>
-        : <h1>{name}</h1>,
+    <React.StrictMode>
+        <Participants
+            list={data}
+        />,
+    </React.StrictMode>,
     document.getElementById('root'),
 )
 

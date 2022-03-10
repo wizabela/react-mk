@@ -1,3 +1,15 @@
+Zadanie1:
+
+Stwórz komponent, który będzie przyjmował listę uczestników kursu.
+
+Przyjmuje on tablicę obiektów. Każdy obiekt reprezentuje uczestnika, posiada imię i email.
+
+Wyświetl po przecinku każdą osobę - wyłącznie jej imię! (Jak to zrobić funkcyjnie?)
+
+Na końcu, w nowej linii, wypisz ile jest łącznie uczestników:
+”Razem: xxx rekordów”.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
