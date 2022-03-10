@@ -3,22 +3,13 @@ import {render} from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import {Participants} from './Participants';
+import {participantsData} from "./data/participants";
 
-const data = [
-    {
-        name: 'Jan',
-        email: 'jan@test.pl',
-    },
-    {
-        name: 'Anna',
-        email: 'anna@wp.pl',
-    }
-];
 
 render(
     <React.StrictMode>
         <Participants
-            list={data}
+            list={participantsData}
         />,
     </React.StrictMode>,
     document.getElementById('root'),
