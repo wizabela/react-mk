@@ -2,15 +2,11 @@ import React from 'react';
 import {render} from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import {Participants} from './Participants';
-import {participantsData} from "./data/participants";
-
+import {Numbers} from "./Numbers";
 
 render(
     <React.StrictMode>
-        <Participants
-            list={participantsData}
-        />,
+        <Numbers/>,
     </React.StrictMode>,
     document.getElementById('root'),
 )

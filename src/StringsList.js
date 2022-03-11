@@ -1,8 +1,10 @@
 import './App.css';
-import React from "react";
+import React, {useState} from "react";
 
 export const StringsList = props => {
-    const newArr = [...props.list, props.list.length];
+    useState()
+
+    const newArr = [...props.list];
 
     const string = newArr
         .join(', ');

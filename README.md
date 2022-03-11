@@ -1,13 +1,13 @@
-Zadanie1:
+Zadanie 1 z 11.03.2022
 
-Stwórz komponent, który będzie przyjmował listę uczestników kursu.
+1) Zrób komponent klasowy, który wyświetla liczby po przecinku. (*przechowywać jako tablicę liczb)
 
-Przyjmuje on tablicę obiektów. Każdy obiekt reprezentuje uczestnika, posiada imię i email.
+1. Na początku wyświetlaj 1
+2. Po sekundzie 1, 2
+3. Po dwóch sekundach 1, 2, 3
+4. itd...
+5. Użyj w środku komponentu wcześniej przygotowanego - StringsList
 
-Wyświetl po przecinku każdą osobę - wyłącznie jej imię! (Jak to zrobić funkcyjnie?)
-
-Na końcu, w nowej linii, wypisz ile jest łącznie uczestników:
-”Razem: xxx rekordów”.
 
 
 # Getting Started with Create React App
