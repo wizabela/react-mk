@@ -2,11 +2,11 @@ import React from 'react';
 import {render} from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import {Numbers} from "./Numbers";
+import {Clock} from "./Clock";
 
 render(
     <React.StrictMode>
-        <Numbers/>,
+        <Clock/>,
     </React.StrictMode>,
     document.getElementById('root'),
 )

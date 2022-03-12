@@ -1,4 +1,4 @@
-Zadanie 1 z 11.03.2022
+Zadania
 
 1) Zrób komponent klasowy, który wyświetla liczby po przecinku. (*przechowywać jako tablicę liczb)
 
@@ -8,6 +8,7 @@ Zadanie 1 z 11.03.2022
 4. itd...
 5. Użyj w środku komponentu wcześniej przygotowanego - StringsList
 
+2) Zrób zegarek. Wyświetlaj aktualną datę i czas w komponencie.
 
 
 # Getting Started with Create React App
