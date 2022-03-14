@@ -11,7 +11,7 @@ export class Numbers extends Component {
         this.intervalId = setInterval(() => {
 
             this.setState(prev => ({
-                number: [...prev.number, prev.number[prev.number.length-1] + 1],
+                number: [...prev.number, prev.number.length+1],
             }));
 
         }, 1000)
