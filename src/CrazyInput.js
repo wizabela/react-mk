@@ -1,17 +1,17 @@
 import React, {useEffect, useState} from 'react';
 
 export const CrazyInput = props => {
-    const [inputType, setInputType] = useState('password');
+    const [backgroundColor, setBackgroundColor] = useState('white');
 
     useEffect(() => {
         const intervalId = setInterval(() => {
-            setInputType(inputType => (
-                inputType === 'password' ? 'text' : 'password'
+            setBackgroundColor(backgroundColor => (
+                backgroundColor === 'white' ? 'yellow' : 'white'
             ));
-        }, 1000);
+        }, 500);
 
         return () => clearInterval(intervalId); //uwaga na to
 
     }, [])
-    return <input type={inputType}/>;
+    return <input type="password" className="info"/>;
 };
