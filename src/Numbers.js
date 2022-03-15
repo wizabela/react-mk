@@ -1,28 +1,47 @@
 import './App.css';
-import React, {Component} from "react";
+import React, {useEffect, useState} from "react";
 import {StringsList} from "./StringsList";
 
-export class Numbers extends Component {
-    state = {
-        number: [1],
-    };
+export const Numbers = props => {
+    const [numbers, setNumbers] = useState([1]);
 
-    componentDidMount() {
-        this.intervalId = setInterval(() => {
+    useEffect(() => {
+        const intervalId = setInterval(() => {
 
-            this.setState(prev => ({
-                number: [...prev.number, prev.number.length+1],
-            }));
+            setNumbers(numbers => [...numbers, numbers.length + 1]);
 
-        }, 1000)
-    }
+        }, 1000);
 
-    componentWillUnmount() {
-        clearInterval(this.intervalId);
-    }
+        return () => clearInterval(intervalId); //zwracamy funkcję, która będzie czyściła
+    }, []);
 
-    render() {
-        const {number} = this.state;
-        return <StringsList list={number}/>
-    }
-}
+
+    return <StringsList list={numbers}/>;
+};
+
+
+//komponent klasowy:
+// export class Numbers extends Component {
+//     state = {
+//         number: [1],
+//     };
+//
+//     componentDidMount() {
+//         this.intervalId = setInterval(() => {
+//
+//             this.setState(prev => ({
+//                 number: [...prev.number, prev.number.length+1],
+//             }));
+//
+//         }, 1000)
+//     }
+//
+//     componentWillUnmount() {
+//         clearInterval(this.intervalId);
+//     }
+//
+//     render() {
+//         const {number} = this.state;
+//         return <StringsList list={number}/>
+//     }
+// }

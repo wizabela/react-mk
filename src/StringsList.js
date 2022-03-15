@@ -1,13 +1,14 @@
 import './App.css';
-import React, {useState} from "react";
+import React, {useEffect} from "react";
 
 export const StringsList = props => {
-    useState()
 
-    const newArr = [...props.list];
-
-    const string = newArr
+    const string = props.list
         .join(', ');
+
+    useEffect(() => {
+        console.log('Zmienia się lista.');
+    }, [props.list]);
 
     return <p>{string}</p>
 

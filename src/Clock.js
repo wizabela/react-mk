@@ -7,9 +7,14 @@ export const Clock = props => {
 
     useEffect(() => {
 
-        setInterval(() => {
+        const intervalId = setInterval(() => {
             setDt(new Date());
         }, 1000);
+
+
+        return () => {
+            clearInterval(intervalId);
+        };
 
     }, []);
 
