@@ -1,0 +1,8 @@
+.Progressbar {
+    background: cadetblue;
+    height: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.35em;
+}

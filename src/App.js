@@ -1,10 +1,14 @@
 import React from "react";
 import './App.css';
-import {CrazyInput} from "./CrazyInput";
+import {Progressbar} from "./Progressbar";
 
 
 export const App = props => (
     <>
-      <CrazyInput/>
+        <Progressbar percentage={0}/>
+        <Progressbar percentage={25}/>
+        <Progressbar percentage={50}/>
+        <Progressbar percentage={75}/>
+        <Progressbar percentage={100}/>
     </>
 );
