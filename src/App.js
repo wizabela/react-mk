@@ -1,10 +1,10 @@
 import React from "react";
 import './App.css';
-import {PasswordInput} from "./PasswordInput";
+import {ThreeColorsLed} from "./ThreeColorsLed";
 
 
 export const App = props => (
     <>
-        <PasswordInput/>
+        <ThreeColorsLed/>
     </>
 );
