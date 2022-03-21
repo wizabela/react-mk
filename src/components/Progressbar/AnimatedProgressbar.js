@@ -14,8 +14,7 @@ export const AnimatedProgressbar = props => {
 
               return percentage + 0.2;
           });
-
-      }, 16);
+     }, 16);
 
       return () => clearInterval(intervalId);
     }, []);
