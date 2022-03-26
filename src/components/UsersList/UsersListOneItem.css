@@ -31,3 +31,6 @@
     font-size: 75%;
     color: gray;
 }
+p::first-letter {
+    text-transform: capitalize;
+}
