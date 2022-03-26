@@ -9,6 +9,13 @@ export const UsersListOneItem = props => (
             src={`https://raw.githubusercontent.com/pixelastic/fakeusers/master/pictures/${props.user.picture}`}
             alt={`Photo of ${props.user.first_name}`}
         />
-        <strong>{props.user.first_name} {props.user.last_name}</strong> {props.user.username}
+        <div  className="UsersListOneItem__text">
+            <p>
+                {props.user.first_name} {props.user.last_name}
+            </p>
+            <p className="UsersListOneItem__username">
+                {props.user.username}
+            </p>
+        </div>
     </li>
 );

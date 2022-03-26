@@ -1,8 +1,10 @@
 import React from 'react';
 import {UsersListOneItem} from "./UsersListOneItem";
 
+import './UsersList.css';
+
 export const UsersList = props => (
-    <ul>
+    <ul className="UsersList">
         {
             [...props.users]
                 .sort((a, b) => a.username.localeCompare(b.username))
