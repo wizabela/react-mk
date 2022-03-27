@@ -1,9 +1,20 @@
-import React from "react";
+import React, {useState} from "react";
 import './App.css';
-import {UsersList} from "../UsersList/UsersList";
-import {people} from "../../data/people";
 
 
 export const App = props => {
-    return <UsersList users={people}/>;
+    const [firstName, setFirstName] = useState('');
+
+    const color = firstName[0] === '@' ? 'green' : 'red';
+
+    return <>
+        <h1>Hello, {firstName}!</h1>
+        <input
+            type="text"
+            value={firstName}
+            onChange={e => setFirstName(e.target.value.toUpperCase)}
+            style={{backgroundColor: color}}
+        />
+        <p>You've entered {firstName.length} characters.</p>
+    </>;
 };
