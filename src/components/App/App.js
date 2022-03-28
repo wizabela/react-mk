@@ -1,60 +1,32 @@
-import React, {useState} from "react";
+import React from "react";
 
 import './App.css';
+import {Dialog} from "../common/Dialog/Dialog";
 
 
 export const App = props => {
-    const [person, setPerson] = useState({
-        firstName: '',
-        lastName: '',
-        age: 0,
-    });
+    return <>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus deleniti deserunt expedita
+            impedit laudantium maiores maxime minima molestiae mollitia neque nobis, perferendis quasi quo recusandae
+            sequi sit soluta voluptates!</p>
 
+        <Dialog title="Witam">
+            Witaj serdecznie na stronie głównej.
+        </Dialog>
 
-    const sendForm = e => {
-        e.preventDefault();
+        <Dialog title="Testowe okno">
+            <h1>Tytuł okna</h1>
+            <p>Sialalala</p>
+            <p>A to trochę tekstu...</p>
+        </Dialog>
 
-        console.log(person);
-    };
-    const change = e => setPerson({
-        ...person,
-        [e.target.name]: e.target.value,
-    });
-
-    return <form onSubmit={sendForm}>
-        <p>
-            <label>
-                Imię:<br/>
-                <input
-                    type="text"
-                    value={person.firstName}
-                    name="firstName"
-                    onChange={change}
-                />
-            </label>
-        </p>
-        <p>
-            <label>
-                Nazwisko:<br/>
-                <input
-                    type="text"
-                    value={person.lastName}
-                    name="lastName"
-                    onChange={change}/>
-            </label>
-        </p>
-        <p>
-            <label>
-                Wiek:<br/>
-                <input
-                    type="number"
-                    value={person.age}
-                    name="age"
-                    onChange={change}/>
-            </label>
-        </p>
-        <p>
-            <button type="submit">Zarejestruj</button>
-        </p>
-    </form>
+        <p>Adipisci assumenda consequuntur delectus esse est laudantium libero
+        obcaecati odit quae unde. Autem laboriosam libero maxime ratione repudiandae sapiente tempora. Autem blanditiis
+        culpa dolores eius exercitationem nemo, saepe vel veritatis!</p><p>Accusamus suscipit, veniam. Ab architecto
+        aspernatur, assumenda cumque eaque enim hic, id impedit in libero molestias, necessitatibus nobis non odit
+        praesentium ratione repudiandae soluta vitae! Ab inventore suscipit veniam voluptate.</p><p>Alias autem
+        cupiditate ducimus quisquam! Ad adipisci necessitatibus neque nisi placeat soluta vero. Ab accusantium autem
+        deserunt et fugiat, iusto laboriosam modi mollitia quidem repudiandae sint voluptatem voluptatum? Aut,
+        iusto!</p>
+    </>
 };
