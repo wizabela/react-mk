@@ -4,18 +4,16 @@ import './App.css';
 
 
 export const App = props => {
-    const [firstName, setFirstName] = useState('');
-    const [lastName, setLastName] = useState('');
-    const [age, setAge] = useState(0);
+    const [person, setPerson] = useState({
+        firstName: '',
+        lastName: '',
+        age: 0,
+    });
+
 
     const sendForm = e => {
         e.preventDefault();
 
-        const person = {
-            firstName,
-            lastName,
-            age,
-        };
         console.log(person);
     };
 
@@ -25,8 +23,11 @@ export const App = props => {
                 Imię:<br/>
                 <input
                     type="text"
-                    value={firstName}
-                    onChange={e => setFirstName(e.target.value)}
+                    value={person.firstName}
+                    onChange={e => setPerson({
+                        ...person,
+                        firstName: e.target.value,
+                    })}
                 />
             </label>
         </p>
@@ -35,8 +36,11 @@ export const App = props => {
                 Nazwisko:<br/>
                 <input
                     type="text"
-                    value={lastName}
-                    onChange={e => setLastName(e.target.value)}/>
+                    value={person.lastName}
+                    onChange={e => setPerson({
+                        ...person,
+                        lastName: e.target.value,
+                    })}/>
             </label>
         </p>
         <p>
@@ -44,8 +48,11 @@ export const App = props => {
                 Wiek:<br/>
                 <input
                     type="number"
-                    value={age}
-                    onChange={e => setAge(Number(e.target.value))}/>
+                    value={person.age}
+                    onChange={e => setPerson({
+                        ...person,
+                        age: Number(e.target.value),
+                    })}/>
             </label>
         </p>
         <p>
