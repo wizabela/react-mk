@@ -2,6 +2,7 @@ import React from "react";
 
 import './App.css';
 import {Dialog} from "../common/Dialog/Dialog";
+import {ConfirmDialog} from "../common/Dialog/ConfirmDialog";
 
 
 export const App = props => {
@@ -19,6 +20,10 @@ export const App = props => {
             <p>Sialalala</p>
             <p>A to trochę tekstu...</p>
         </Dialog>
+
+        <ConfirmDialog title="Czy na pewno?">
+            Jesteś pewna?
+        </ConfirmDialog>
 
         <p>Adipisci assumenda consequuntur delectus esse est laudantium libero
         obcaecati odit quae unde. Autem laboriosam libero maxime ratione repudiandae sapiente tempora. Autem blanditiis
